@@ -73,7 +73,6 @@ export const Header = () => {
             </Card>
           </MUILink>
           <Box sx={{ gap: 1, display: "flex", flexDirection: "row" }}>
-            <EarlyAccessButton />
             <SignInButton />
           </Box>
         </Toolbar>
