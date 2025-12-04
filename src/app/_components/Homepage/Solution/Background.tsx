@@ -1,0 +1,50 @@
+"use client";
+
+import { useIntersectionObserver } from "@/app/_hooks/useIntersectionObserver";
+import { Box, CardContent } from "@mui/material";
+
+export const Background = () => {
+  const [shouldLoad, ref] = useIntersectionObserver();
+
+  return (
+    <CardContent
+      sx={{
+        position: "absolute",
+        width: "100%",
+        top: 0,
+        p: 0,
+      }}
+    >
+      <Box
+        ref={ref}
+        component="video"
+        aria-hidden="true"
+        loop
+        muted
+        playsInline
+        preload="none"
+        autoPlay={shouldLoad}
+        poster="https://qqkkast9xvsaxkcy.public.blob.vercel-storage.com/numa_2_poster.webp"
+        sx={{
+          height: { lg: "105vh", md: "105vh", sm: "120vh", xs: "140vh" },
+          width: "100%",
+          objectFit: "cover",
+          objectPosition: "center",
+        }}
+      >
+        {shouldLoad && (
+          <>
+            <source
+              src="https://qqkkast9xvsaxkcy.public.blob.vercel-storage.com/numa_2.webm"
+              type="video/webm"
+            />
+            <source
+              src="https://qqkkast9xvsaxkcy.public.blob.vercel-storage.com/numa_2_fallback.mp4"
+              type="video/mp4"
+            />
+          </>
+        )}
+      </Box>
+    </CardContent>
+  );
+};
