@@ -35,20 +35,41 @@ export const Header = () => {
                 component="img"
                 src="/logo.png"
                 alt="Numa Mundi logo"
-                sx={{ height: 40, width: 40, mr: 1 }}
+                sx={{ height: 48, width: 48, mr: 1 }}
               />
-              <Typography
-                variant="h6"
-                component="div"
-                fontSize={24}
-                fontFamily="var(--font-alkatra)"
+              <Box
                 sx={{
-                  color: "primary.main",
-                  display: { xs: "none", sm: "block" },
+                  display: { xs: "none", sm: "flex" },
+                  flexDirection: "column",
                 }}
               >
-                Numa Mundi
-              </Typography>
+                <Typography
+                  variant="h6"
+                  component="div"
+                  fontSize={24}
+                  fontFamily="var(--font-bebas-neue)"
+                  letterSpacing={0.6}
+                  sx={{
+                    color: "primary.main",
+                    lineHeight: 1,
+                  }}
+                >
+                  Sun Ra
+                </Typography>
+                <Typography
+                  variant="h6"
+                  component="div"
+                  fontSize={24}
+                  fontFamily="var(--font-bebas-neue)"
+                  letterSpacing={0.6}
+                  sx={{
+                    color: "yellow.main",
+                    lineHeight: 1,
+                  }}
+                >
+                  Records
+                </Typography>
+              </Box>
             </Card>
           </MUILink>
           <Box sx={{ gap: 1, display: "flex", flexDirection: "row" }}>

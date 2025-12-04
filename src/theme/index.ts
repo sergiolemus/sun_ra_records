@@ -39,7 +39,7 @@ export const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: ["var(--font-roboto)", "var(--font-alkatra)"].join(","),
+    fontFamily: ["var(--font-roboto)", "var(--font-bebas-neue)"].join(","),
   },
   components: {
     MuiButton: {

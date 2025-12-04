@@ -3,7 +3,7 @@ import { Header } from "./_components/Header";
 import { ThemeProvider } from "@mui/material/styles";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 import { roboto } from "@/fonts/roboto";
-import { alkatra } from "@/fonts/alkatra";
+import { bebasNeue } from "@/fonts/bebasNeue";
 import { theme } from "@/theme";
 import CssBaseline from "@mui/material/CssBaseline";
 import Head from "next/head";
@@ -85,7 +85,7 @@ type TRootLayout = ({
 
 const RootLayout: TRootLayout = ({ children }) => {
   return (
-    <html lang="en" className={`${roboto.variable} ${alkatra.variable}`}>
+    <html lang="en" className={`${roboto.variable} ${bebasNeue.variable}`}>
       <Head>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
