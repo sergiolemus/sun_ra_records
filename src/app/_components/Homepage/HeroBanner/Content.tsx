@@ -2,7 +2,6 @@
 
 import React from "react";
 import { Container, Typography } from "@mui/material";
-import { ParallaxScroll } from "../ParallaxScroll";
 import { Button as EarlyAccessButton } from "../../Subscriptions/Button";
 import { OnScroll } from "../OnScroll";
 import { MotionCardContent } from "../../Motion";
@@ -21,7 +20,7 @@ export const Content = () => (
           height: "100%",
           alignContent: "start",
           background:
-            "linear-gradient(rgb(0, 0, 0, 0%), rgb(0, 0, 0, 30%) 75%, rgb(0, 0, 0, 20%))",
+            "linear-gradient(rgb(0, 0, 0, 30%), rgb(0, 0, 0, 10%) 30%, rgb(0, 0, 0, 30%) 80%, rgb(0, 0, 0, 20%))",
         }}
         style={{ backgroundColor, color }}
       >
@@ -34,17 +33,20 @@ export const Content = () => (
         >
           <Typography
             variant="h3"
-            fontFamily="var(--font-alkatra)"
+            fontFamily="var(--font-bebas-neue)"
             letterSpacing={-1}
             sx={{ fontSize: { lg: 88, sm: 88, xs: 44 } }}
           >
-            Redefine Music Production.
+            Own Your Masters. Build Your Empire.
           </Typography>
-          <Typography fontSize={16} mb={3}>
-            Experience the future of music creation with the world&apos;s most
-            advanced AI partner for musicians and producers.
+          <Typography fontSize={16} mb={1}>
+            The artist accelerator that turns proven talent into investor-ready
+            companies. Keep 80% equity, 100% of your masters.
           </Typography>
-          <EarlyAccessButton style={{ opacity }} />
+          <Typography fontSize={14} sx={{ opacity: 0.8, fontStyle: "italic" }}>
+            Invite only. Currently accepting artists with 50k+ monthly listeners
+            and proven market traction.
+          </Typography>
         </Container>
       </MotionCardContent>
     )}
