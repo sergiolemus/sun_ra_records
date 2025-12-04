@@ -1,4 +1,4 @@
-# Copilot Instructions for numa_mundi
+# Copilot Instructions for Sun Ra Records
 
 ## General Behavior
 
@@ -123,42 +123,11 @@ This is a **Next.js 15 app** using the **App Router** with a modern stack:
 
 ### Key Resources
 
-- `resources/numa_mundi_mvp.md` - MVP requirements and product scope
-- `resources/numa_mundi_research.md` - User/market research and project background
+- `resources/sun_ra_records_mvp.md` - MVP requirements and product scope
 
 **Important**: Review these PDFs for project context, user requirements, and brand guidelines before implementing features.
 
 ## Product Stage & Strategy
-
-### Current Status (as of October 2025)
-
-- **Stage**: Pure concept/building phase - no live product yet
-- **Website Goal**: Provide a face for the product and gather initial interest while building
-- **Assets**: Notable team credentials (founders)
-- **Not Yet Available**: Beta testers, user testimonials, common questions/FAQs, metrics/traction
-
-### Website Section Strategy
-
-**Current sections (implemented):**
-
-- Hero Banner
-- Problem
-- Solution
-- How It Works
-- Pricing
-
-**Planned sections (priority order):**
-
-1. **Team** - Showcase founder credentials and build trust (our main credibility asset)
-2. **Waitlist/Early Access CTA** - Email capture for launch notifications and early access
-
-**Skip for now (until we have real data):**
-
-- FAQ (no real user questions yet)
-- Social Proof/Testimonials (no users yet)
-- Feature deep-dives (product still in development)
-
-**Site Audience**: 100% focused on end users/customers, NOT investors. Investors get pitched separately with deck/materials.
 
 ### Design Philosophy
 
