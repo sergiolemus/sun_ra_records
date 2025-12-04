@@ -32,16 +32,14 @@ export const Content = () => (
             top: "60%",
           }}
         >
-          <ParallaxScroll end={-200}>
-            <Typography
-              variant="h3"
-              fontFamily="var(--font-alkatra)"
-              letterSpacing={-1}
-              sx={{ fontSize: { lg: 88, sm: 88, xs: 44 } }}
-            >
-              Redefine Music Production.
-            </Typography>
-          </ParallaxScroll>
+          <Typography
+            variant="h3"
+            fontFamily="var(--font-alkatra)"
+            letterSpacing={-1}
+            sx={{ fontSize: { lg: 88, sm: 88, xs: 44 } }}
+          >
+            Redefine Music Production.
+          </Typography>
           <Typography fontSize={16} mb={3}>
             Experience the future of music creation with the world&apos;s most
             advanced AI partner for musicians and producers.
