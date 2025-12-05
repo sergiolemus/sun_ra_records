@@ -24,7 +24,7 @@ export const Footer = () => {
         }}
       >
         <Typography fontSize={14} color="common.white">
-          © 2025 Numa Mundi. All Rights Reserved
+          © 2025 Sun Ra Records. All Rights Reserved
         </Typography>
         <Box display="none">
           <Typography fontSize={14} color="common.white">
