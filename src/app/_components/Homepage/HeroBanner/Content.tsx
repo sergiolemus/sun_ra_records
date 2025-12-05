@@ -37,7 +37,7 @@ export const Content = () => (
             fontFamily="var(--font-bebas-neue)"
             letterSpacing={-1}
             sx={{
-              fontSize: { lg: 120, sm: 88, xs: 44 },
+              fontSize: { lg: 100, sm: 88, xs: 44 },
             }}
           >
             Own Your Masters. Build Your Empire.
