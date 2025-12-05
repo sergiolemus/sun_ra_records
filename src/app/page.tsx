@@ -4,7 +4,8 @@ import Box from "@mui/material/Box";
 import { HeroBanner } from "./_components/Homepage/HeroBanner";
 
 export const metadata: Metadata = {
-  title: "Numa Mundi | Best AI Partner for Music Production",
+  title:
+    "Sun Ra Records | Artist Accelerator - Own Your Masters. Build Your Empire.",
 };
 
 type THome = () => React.JSX.Element;

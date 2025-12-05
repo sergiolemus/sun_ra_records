@@ -16,53 +16,57 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || "https://numamundi.com"
+    process.env.NEXT_PUBLIC_SITE_URL || "https://sunrarecords.com"
   ),
   title: {
-    default: "Numa Mundi | AI Partner for Music Production",
-    template: "%s | Numa Mundi",
+    default:
+      "Sun Ra Records | Artist Accelerator - Own Your Masters. Build Your Empire.",
+    template: "%s | Sun Ra Records",
   },
   description:
-    "Transform your music production workflow with Numa - the emergent AI bandmate that understands your creative process. Fair royalty splits, real-time collaboration, continuity of self.",
+    "NYC artist accelerator turning proven talent into investor-ready companies. Keep 80% equity and 100% ownership of your masters. Legal, business, and investor access for high-caliber artists.",
   keywords: [
-    "AI music production",
-    "music creation assistant",
-    "AI bandmate",
-    "music producer tools",
-    "real-time music collaboration",
-    "AI music partner",
-    "emergent AI",
-    "music technology",
-    "DAW AI assistant",
+    "artist accelerator",
+    "music business",
+    "own your masters",
+    "music equity",
+    "independent artist",
+    "artist investment",
+    "music funding",
+    "artist company",
+    "music entrepreneur",
+    "NYC music",
+    "artist ownership",
+    "music startup",
   ],
-  authors: [{ name: "Numa Mundi Team" }],
-  creator: "Numa Mundi",
-  publisher: "Numa Mundi",
+  authors: [{ name: "Sun Ra Records" }],
+  creator: "Sun Ra Records",
+  publisher: "Sun Ra Records",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "/",
-    siteName: "Numa Mundi",
-    title: "Numa Mundi | AI Partner for Music Production",
+    siteName: "Sun Ra Records",
+    title: "Sun Ra Records | Artist Accelerator - Own Your Masters",
     description:
-      "Transform your music production workflow with Numa - the emergent AI bandmate that learns, improvises, and grows with you.",
+      "NYC artist accelerator structuring proven talent as fundable companies. Keep 80% equity, 100% of your masters. Invite only for artists with demonstrated market traction.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Numa Mundi - Emergent AI Bandmate for Music Creators",
+        alt: "Sun Ra Records - Artist Accelerator",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Numa Mundi | AI Partner for Music Production",
+    title: "Sun Ra Records | Artist Accelerator",
     description:
-      "The emergent AI bandmate that learns, improvises, and grows with you. Fair royalty splits. Real-time collaboration.",
+      "Turn proven talent into investor-ready companies. Keep 80% equity, 100% of your masters. NYC artist accelerator for high-caliber talent.",
     images: ["/og-image.png"],
-    creator: "@numamundi",
-    site: "@numamundi",
+    creator: "@sunrarecords",
+    site: "@sunrarecords",
   },
   robots: {
     index: true,

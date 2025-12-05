@@ -33,7 +33,7 @@ export const Header = () => {
               <CardMedia
                 component="img"
                 src="/logo.png"
-                alt="Numa Mundi logo"
+                alt="Sun Ra Records logo"
                 sx={{ height: 48, width: 48, mr: 1 }}
               />
               <Box
