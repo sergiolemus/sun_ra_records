@@ -5,7 +5,6 @@ import Typography from "@mui/material/Typography";
 import { Link as MUILink, Card, CardMedia } from "@mui/material";
 import { NavBar } from "./NavBar";
 import Link from "next/link";
-import { Button as EarlyAccessButton } from "../Subscriptions/Button";
 import { Button as SignInButton } from "../SignIn";
 
 export const Header = () => {

@@ -2,7 +2,6 @@
 
 import React from "react";
 import { Container, Typography } from "@mui/material";
-import { Button as EarlyAccessButton } from "../../Subscriptions/Button";
 import { OnScroll } from "../OnScroll";
 import { MotionCardContent } from "../../Motion";
 
@@ -12,7 +11,7 @@ export const Content = () => (
     colorA={{ start: "#00000000", end: "#000" }}
     colorB={{ start: "#FFF", end: "#000" }}
     number={{ start: 1, end: 0 }}
-    render={({ colorA: backgroundColor, colorB: color, number: opacity }) => (
+    render={({ colorA: backgroundColor, colorB: color }) => (
       <MotionCardContent
         sx={{
           position: "absolute",
@@ -20,30 +19,39 @@ export const Content = () => (
           height: "100%",
           alignContent: "start",
           background:
-            "linear-gradient(rgb(0, 0, 0, 30%), rgb(0, 0, 0, 10%) 30%, rgb(0, 0, 0, 30%) 80%, rgb(0, 0, 0, 20%))",
+            "linear-gradient(rgb(0, 0, 0, 30%), rgb(0, 0, 0, 10%) 40%, rgb(0, 0, 0, 80%) 90%, rgb(0, 0, 0, 80%))",
         }}
         style={{ backgroundColor, color }}
       >
         <Container
-          maxWidth="lg"
+          maxWidth="xl"
           sx={{
             position: "relative",
-            top: "60%",
+            textAlign: "center",
+            mixBlendMode: "difference",
+            top: "70%",
           }}
         >
           <Typography
             variant="h3"
             fontFamily="var(--font-bebas-neue)"
             letterSpacing={-1}
-            sx={{ fontSize: { lg: 88, sm: 88, xs: 44 } }}
+            sx={{
+              fontSize: { lg: 120, sm: 88, xs: 44 },
+            }}
           >
             Own Your Masters. Build Your Empire.
           </Typography>
           <Typography fontSize={16} mb={1}>
-            The artist accelerator that turns proven talent into investor-ready
-            companies. Keep 80% equity, 100% of your masters.
+            The partner that turns proven talent into investor-ready companies.
+            Keep 80% equity, 100% of your masters.
           </Typography>
-          <Typography fontSize={14} sx={{ opacity: 0.8, fontStyle: "italic" }}>
+          <Typography
+            fontSize={14}
+            textAlign="center"
+            fontStyle="italic"
+            sx={{ opacity: 0.8 }}
+          >
             Invite only. Currently accepting artists with 50k+ monthly listeners
             and proven market traction.
           </Typography>
