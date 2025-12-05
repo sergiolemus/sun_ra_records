@@ -19,7 +19,7 @@ export const Background = () => (
       playsInline
       preload="metadata"
       autoPlay
-      poster="https://qqkkast9xvsaxkcy.public.blob.vercel-storage.com/numa_1_poster.webp"
+      poster="https://rvkogc2we8rdzja3.public.blob.vercel-storage.com/sun_ra_records_poster.webp"
       sx={{
         height: "100vh",
         width: "100%",
@@ -28,11 +28,11 @@ export const Background = () => (
       }}
     >
       <source
-        src="https://qqkkast9xvsaxkcy.public.blob.vercel-storage.com/numa_1.webm"
+        src="https://rvkogc2we8rdzja3.public.blob.vercel-storage.com/sun_ra_records.webm"
         type="video/webm"
       />
       <source
-        src="https://qqkkast9xvsaxkcy.public.blob.vercel-storage.com/numa_1_fallback.mp4"
+        src="https://rvkogc2we8rdzja3.public.blob.vercel-storage.com/sun_ra_records.mp4"
         type="video/mp4"
       />
     </Box>
