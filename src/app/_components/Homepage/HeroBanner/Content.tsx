@@ -1,9 +1,10 @@
 "use client";
 
 import React from "react";
-import { Container, Typography } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
 import { OnScroll } from "../OnScroll";
 import { MotionCardContent } from "../../Motion";
+import { Button as ApplyButton } from "../../Subscriptions/Button";
 
 export const Content = () => (
   <OnScroll
@@ -28,33 +29,35 @@ export const Content = () => (
           sx={{
             position: "relative",
             textAlign: "center",
-            mixBlendMode: "difference",
-            top: "70%",
+            top: "66%",
           }}
         >
-          <Typography
-            variant="h3"
-            fontFamily="var(--font-bebas-neue)"
-            letterSpacing={-1}
-            sx={{
-              fontSize: { lg: 100, sm: 88, xs: 44 },
-            }}
-          >
-            Own Your Masters. Build Your Empire.
-          </Typography>
-          <Typography fontSize={16} mb={1}>
-            The partner that turns proven talent into investor-ready companies.
-            Keep 80% equity, 100% of your masters.
-          </Typography>
-          <Typography
-            fontSize={14}
-            textAlign="center"
-            fontStyle="italic"
-            sx={{ opacity: 0.8 }}
-          >
-            Invite only. Currently accepting artists with 50k+ monthly listeners
-            and proven market traction.
-          </Typography>
+          <Box sx={{ mixBlendMode: "difference" }}>
+            <Typography
+              variant="h3"
+              fontFamily="var(--font-bebas-neue)"
+              letterSpacing={-1}
+              sx={{
+                fontSize: { lg: 100, sm: 88, xs: 44 },
+              }}
+            >
+              Own Your Masters. Build Your Empire.
+            </Typography>
+            <Typography fontSize={16} mb={1}>
+              The partner that turns proven talent into investor-ready
+              companies. Keep 80% equity, 100% of your masters.
+            </Typography>
+            <Typography
+              fontSize={14}
+              textAlign="center"
+              fontStyle="italic"
+              sx={{ opacity: 0.8 }}
+            >
+              Acceptance is Invite-Only. Currently structuring our first cohort
+              of 5 artists with proven market traction.
+            </Typography>
+          </Box>
+          <ApplyButton sx={{ mt: 4 }} />
         </Container>
       </MotionCardContent>
     )}

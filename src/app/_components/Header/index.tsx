@@ -6,6 +6,7 @@ import { Link as MUILink, Card, CardMedia } from "@mui/material";
 import { NavBar } from "./NavBar";
 import Link from "next/link";
 import { Button as SignInButton } from "../SignIn";
+import { Button as ApplyButton } from "../Subscriptions/Button";
 
 export const Header = () => {
   return (
@@ -72,6 +73,7 @@ export const Header = () => {
             </Card>
           </MUILink>
           <Box sx={{ gap: 1, display: "flex", flexDirection: "row" }}>
+            <ApplyButton />
             <SignInButton />
           </Box>
         </Toolbar>

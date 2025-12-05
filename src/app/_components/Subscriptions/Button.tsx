@@ -16,7 +16,7 @@ export type TButton = {
 export const Button = ({
   color = "primary",
   variant = "contained",
-  children = "Get Early Access",
+  children = "Request Catalog Review",
   sx,
   style,
 }: TButton) => {
