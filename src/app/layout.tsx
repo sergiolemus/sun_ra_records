@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "/",
     siteName: "Sun Ra Records",
-    title: "Sun Ra Records | Artist Accelerator - Own Your Masters",
+    title: "Sun Ra Records | Artist Accelerator - Own Your Masters.",
     description:
       "NYC artist accelerator structuring proven talent as fundable companies. Keep 80% equity, 100% of your masters. Invite only for artists with demonstrated market traction.",
     images: [
