@@ -1,6 +1,5 @@
 import { Box, Card } from "@mui/material";
 import { Content } from "./Content";
-import { Background } from "./Background";
 
 export const Waitlist = () => (
   <Box

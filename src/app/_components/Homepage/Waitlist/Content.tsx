@@ -6,9 +6,6 @@ import { MotionCardContent } from "../../Motion";
 import { Form } from "./Form";
 
 export const Content = () => {
-  const isMobile = useMediaQuery(({ breakpoints: b }) => b.down("sm"));
-  const isTablet = useMediaQuery(({ breakpoints: b }) => b.down("lg"));
-
   return (
     <MotionCardContent
       sx={{
