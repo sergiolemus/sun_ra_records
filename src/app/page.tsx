@@ -2,6 +2,7 @@ import React from "react";
 import { Metadata } from "next";
 import Box from "@mui/material/Box";
 import { HeroBanner } from "./_components/Homepage/HeroBanner";
+import { Waitlist } from "./_components/Homepage/Waitlist";
 
 export const metadata: Metadata = {
   title:
@@ -14,6 +15,7 @@ const Home: THome = () => {
   return (
     <Box>
       <HeroBanner />
+      <Waitlist />
     </Box>
   );
 };

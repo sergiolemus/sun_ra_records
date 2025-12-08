@@ -9,7 +9,7 @@ export const Waitlist = () => (
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
-      height: { lg: "1000px", md: "1000px", sm: "1000px", xs: "1200px" },
+      height: { lg: "800px", md: "800px", sm: "800px", xs: "1000px" },
       backgroundColor: "transparent",
     }}
   >
@@ -23,7 +23,6 @@ export const Waitlist = () => (
         backgroundColor: "inherit",
       }}
     >
-      <Background />
       <Content />
     </Card>
   </Box>

@@ -12,7 +12,7 @@ export const Content = () => (
     colorA={{ start: "#00000000", end: "#000" }}
     colorB={{ start: "#FFF", end: "#000" }}
     number={{ start: 1, end: 0 }}
-    render={({ colorA: backgroundColor, colorB: color }) => (
+    render={({ colorA: backgroundColor, colorB: color, number: opacity }) => (
       <MotionCardContent
         sx={{
           position: "absolute",
@@ -57,7 +57,7 @@ export const Content = () => (
               of 5 artists with proven market traction.
             </Typography>
           </Box>
-          <ApplyButton sx={{ mt: 4 }} />
+          <ApplyButton sx={{ mt: 4 }} style={{ opacity }} />
         </Container>
       </MotionCardContent>
     )}
