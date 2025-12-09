@@ -53,7 +53,7 @@ export const Button = ({
         color={color}
         size="large"
         onClick={handleClick}
-        sx={{ ...sx, display: "none" }}
+        sx={{ ...sx }}
       >
         {children}
       </MuiButton>

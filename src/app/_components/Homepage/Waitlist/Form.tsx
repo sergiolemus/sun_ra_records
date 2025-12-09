@@ -32,7 +32,10 @@ export type FormProps = {
 };
 
 export const Form = ({ style }: FormProps) => {
+  const [artistName, setArtistName] = useState("");
   const [email, setEmail] = useState("");
+  const [streamingLink, setStreamingLink] = useState("");
+  const [socialMediaLink, setSocialMediaLink] = useState("");
   const [reason, setReason] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -68,7 +71,13 @@ export const Form = ({ style }: FormProps) => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ email, reason }),
+        body: JSON.stringify({
+          email,
+          artistName,
+          streamingLink,
+          socialMediaLink,
+          reason,
+        }),
       });
 
       const data = await response.json();
@@ -83,7 +92,11 @@ export const Form = ({ style }: FormProps) => {
       }
 
       setSuccess(true);
+
+      setArtistName("");
       setEmail("");
+      setStreamingLink("");
+      setSocialMediaLink("");
       setReason("");
     } catch (err) {
       setError(err instanceof Error ? err.message : "Failed to join waitlist");
@@ -97,7 +110,8 @@ export const Form = ({ style }: FormProps) => {
       <MotionCard
         variant="outlined"
         sx={{
-          padding: 4,
+          px: 2,
+          py: 2,
           borderRadius: 8,
           bgcolor: alpha("#000", 0.2),
           backdropFilter: "blur(20px)",
@@ -118,6 +132,21 @@ export const Form = ({ style }: FormProps) => {
             <TextField
               required
               fullWidth
+              type="text"
+              label="Artistic Name"
+              value={artistName}
+              onChange={(e) => setArtistName(e.target.value)}
+              disabled={loading}
+              placeholder="Your artist or stage name"
+              slotProps={{
+                inputLabel: {
+                  ...(isMobile && { shrink: true }),
+                },
+              }}
+            />
+            <TextField
+              required
+              fullWidth
               type="email"
               label="Email Address"
               value={email}
@@ -133,15 +162,44 @@ export const Form = ({ style }: FormProps) => {
               }}
             />
             <TextField
+              required
+              fullWidth
+              type="url"
+              label="Social Media Link"
+              value={socialMediaLink}
+              onChange={(e) => setSocialMediaLink(e.target.value)}
+              disabled={loading}
+              placeholder="Instagram, TikTok, YouTube, etc."
+              slotProps={{
+                inputLabel: {
+                  ...(isMobile && { shrink: true }),
+                },
+              }}
+            />
+            <TextField
+              fullWidth
+              type="url"
+              label="Streaming Link (Optional)"
+              value={streamingLink}
+              onChange={(e) => setStreamingLink(e.target.value)}
+              disabled={loading}
+              placeholder="Spotify, SoundCloud, YouTube, etc."
+              slotProps={{
+                inputLabel: {
+                  ...(isMobile && { shrink: true }),
+                },
+              }}
+            />
+            <TextField
               fullWidth
               multiline
-              label="What excites you most about Numa?"
+              label="What's your artistic vision? (Optional)"
               value={reason}
               onChange={(e) => setReason(e.target.value)}
               disabled={loading}
-              placeholder="Tell us what brought you here..."
+              placeholder="Share your creative direction and where you see your career in 3-5 years..."
               slotProps={{
-                htmlInput: { maxLength: 250 },
+                htmlInput: { maxLength: 500 },
                 formHelperText: { sx: { m: 0, mt: 1 } },
                 inputLabel: {
                   ...(isMobile && { shrink: true }),
@@ -153,7 +211,7 @@ export const Form = ({ style }: FormProps) => {
                   },
                 },
               }}
-              helperText={`${reason.length}/250 characters`}
+              helperText={`${reason.length}/500 characters`}
               minRows={3}
               maxRows={8}
             />
@@ -176,11 +234,12 @@ export const Form = ({ style }: FormProps) => {
               {loading ? (
                 <CircularProgress size={24} color="primary" />
               ) : (
-                "Request Early Access"
+                "Apply Now"
               )}
             </Button>
             <Typography variant="caption" color="primary" textAlign="center">
-              We&apos;ll reach out when early access opens.
+              All applications reviewed. We&apos;ll reach out to discuss next
+              steps.
             </Typography>
           </Box>
         )}
@@ -196,11 +255,11 @@ export const Form = ({ style }: FormProps) => {
                 backdropFilter: "blur(20px)",
               }}
             >
-              You&apos;re on the list! We&apos;ll reach out when early access is
-              ready.
+              Application submitted successfully!
             </Alert>
             <Typography variant="body2" color="primary">
-              You&apos;ll hear from us soon.
+              We&apos;ll be in touch within 2 weeks, whether you&apos;re ready
+              now or just getting close.
             </Typography>
           </Box>
         )}

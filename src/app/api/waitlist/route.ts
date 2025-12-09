@@ -7,7 +7,7 @@ import { sanitizeText } from "@/app/api/_utils/sanitizeText";
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { email, reason } = body;
+    const { email, artistName, streamingLink, socialMediaLink, reason } = body;
 
     if (!email || typeof email !== "string") {
       return NextResponse.json({ error: "Email is required" }, { status: 400 });
@@ -25,7 +25,44 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const sanitizedReason = sanitizeText({ text: reason, maxLength: 1000 });
+    if (
+      !artistName ||
+      typeof artistName !== "string" ||
+      artistName.trim().length === 0
+    ) {
+      return NextResponse.json(
+        { error: "Artist name is required" },
+        { status: 400 }
+      );
+    }
+
+    if (
+      !socialMediaLink ||
+      typeof socialMediaLink !== "string" ||
+      socialMediaLink.trim().length === 0
+    ) {
+      return NextResponse.json(
+        { error: "Social media link is required" },
+        { status: 400 }
+      );
+    }
+
+    const sanitizedArtistName = sanitizeText({
+      text: artistName,
+      maxLength: 100,
+    });
+
+    const sanitizedStreamingLink = sanitizeText({
+      text: streamingLink,
+      maxLength: 500,
+    });
+
+    const sanitizedSocialMediaLink = sanitizeText({
+      text: socialMediaLink,
+      maxLength: 500,
+    });
+
+    const sanitizedReason = sanitizeText({ text: reason, maxLength: 500 });
 
     const searchParams = request.nextUrl.searchParams;
     const utmSource = searchParams.get("utm_source");
@@ -59,6 +96,11 @@ export async function POST(request: NextRequest) {
       await db
         .update(waitlist)
         .set({
+          artistName: sanitizedArtistName || existingEntry[0].artistName,
+          streamingLink:
+            sanitizedStreamingLink || existingEntry[0].streamingLink,
+          socialMediaLink:
+            sanitizedSocialMediaLink || existingEntry[0].socialMediaLink,
           reason: sanitizedReason || existingEntry[0].reason,
           source: source || existingEntry[0].source,
           updatedAt: Math.floor(Date.now() / 1000),
@@ -77,6 +119,9 @@ export async function POST(request: NextRequest) {
 
     await db.insert(waitlist).values({
       email: email.toLowerCase(),
+      artistName: sanitizedArtistName,
+      streamingLink: sanitizedStreamingLink,
+      socialMediaLink: sanitizedSocialMediaLink,
       reason: sanitizedReason,
       source,
       status: "pending",
