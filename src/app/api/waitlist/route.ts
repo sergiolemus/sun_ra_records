@@ -25,7 +25,6 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Validate required fields
     if (
       !artistName ||
       typeof artistName !== "string" ||
@@ -33,17 +32,6 @@ export async function POST(request: NextRequest) {
     ) {
       return NextResponse.json(
         { error: "Artist name is required" },
-        { status: 400 }
-      );
-    }
-
-    if (
-      !streamingLink ||
-      typeof streamingLink !== "string" ||
-      streamingLink.trim().length === 0
-    ) {
-      return NextResponse.json(
-        { error: "Streaming link is required" },
         { status: 400 }
       );
     }

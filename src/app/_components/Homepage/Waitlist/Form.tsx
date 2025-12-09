@@ -110,8 +110,8 @@ export const Form = ({ style }: FormProps) => {
       <MotionCard
         variant="outlined"
         sx={{
-          px: 4,
-          py: 1,
+          px: 2,
+          py: 2,
           borderRadius: 8,
           bgcolor: alpha("#000", 0.2),
           backdropFilter: "blur(20px)",

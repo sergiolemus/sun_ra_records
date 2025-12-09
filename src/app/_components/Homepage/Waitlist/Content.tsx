@@ -23,7 +23,7 @@ export const Content = () => {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          mb: 4,
+          mb: 1,
         }}
       >
         <Typography
