@@ -133,7 +133,7 @@ export const Form = ({ style }: FormProps) => {
               required
               fullWidth
               type="text"
-              label="Artist/Stage Name"
+              label="Artistic Name"
               value={artistName}
               onChange={(e) => setArtistName(e.target.value)}
               disabled={loading}
