@@ -238,7 +238,8 @@ export const Form = ({ style }: FormProps) => {
               )}
             </Button>
             <Typography variant="caption" color="primary" textAlign="center">
-              We&apos;ll reach out when early access opens.
+              All applications reviewed. We&apos;ll reach out to discuss next
+              steps.
             </Typography>
           </Box>
         )}
@@ -254,11 +255,11 @@ export const Form = ({ style }: FormProps) => {
                 backdropFilter: "blur(20px)",
               }}
             >
-              You&apos;re on the list! We&apos;ll reach out when early access is
-              ready.
+              Application submitted successfully!
             </Alert>
             <Typography variant="body2" color="primary">
-              You&apos;ll hear from us soon.
+              We&apos;ll be in touch within 2 weeks, whether you&apos;re ready
+              now or just getting close.
             </Typography>
           </Box>
         )}

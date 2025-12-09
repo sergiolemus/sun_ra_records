@@ -46,8 +46,8 @@ export const Content = () => {
               color: "common.white",
             }}
           >
-            Get early access and help shape the world&apos;s first emergent
-            bandmate.
+            Limited spots available. Apply to turn your traction into a fundable
+            business.
           </Typography>
         </Container>
       </Container>
