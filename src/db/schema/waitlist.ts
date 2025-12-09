@@ -5,6 +5,9 @@ export const waitlist = sqliteTable("waitlist", {
     .primaryKey()
     .$defaultFn(() => crypto.randomUUID()),
   email: text("email").unique().notNull(),
+  artistName: text("artist_name"),
+  streamingLink: text("streaming_link"),
+  socialMediaLink: text("social_media_link"),
   source: text("source"),
   reason: text("reason"),
   status: text("status").notNull().default("pending"),
