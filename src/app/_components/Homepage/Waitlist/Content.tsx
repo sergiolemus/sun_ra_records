@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Container, Typography, useMediaQuery } from "@mui/material";
+import { Container, Typography } from "@mui/material";
 import { MotionCardContent } from "../../Motion";
 import { Form } from "./Form";
 
