@@ -50,6 +50,7 @@ export const Carousel = ({
     if (audioRef.current) {
       audioRef.current.pause();
       audioRef.current.currentTime = 0;
+      audioRef.current.load();
 
       setIsPlaying(false);
     }
