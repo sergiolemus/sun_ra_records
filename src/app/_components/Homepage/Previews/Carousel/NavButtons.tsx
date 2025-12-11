@@ -82,7 +82,8 @@ export const NavButtons = ({
         <Slider
           value={currentTime}
           max={duration || 100}
-          onChange={(_, value) => onSeek?.({ target: { value } } as any)}
+          //@ts-expect-error skipping type check for event
+          onChange={(_, value) => onSeek?.({ target: { value } })}
           sx={{
             color: "primary.main",
             height: 4,

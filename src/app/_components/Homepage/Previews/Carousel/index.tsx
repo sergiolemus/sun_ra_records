@@ -5,7 +5,7 @@ import { EffectCoverflow } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { Swiper as SwiperType } from "swiper";
 import { NavButtons } from "./NavButtons";
-import { Box, Card, CardContent, Typography } from "@mui/material";
+import { Box, Card, Typography } from "@mui/material";
 
 import "swiper/css";
 import "swiper/css/navigation";
