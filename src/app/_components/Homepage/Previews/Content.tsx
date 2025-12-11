@@ -1,4 +1,4 @@
-import { Box, Container, Card, Typography, CardContent } from "@mui/material";
+import { Box, Container, Typography, CardContent } from "@mui/material";
 import { Carousel } from "./Carousel";
 
 export type ContentProps = {
@@ -12,16 +12,19 @@ export const Content = ({ activeIndex, setActiveIndex }: ContentProps) => {
       title: "The Time is Now",
       artist: "R99tz",
       src: "/preview_1.png",
+      song: "/preview_1.mp3",
     },
     {
       title: "absolute",
       artist: "R99tz",
       src: "/preview_2.png",
+      song: "/preview_2.mp3",
     },
     {
       title: "Jump the Void",
       artist: "R99tz",
       src: "/preview_3.png",
+      song: "/preview_3.mp3",
     },
   ];
 

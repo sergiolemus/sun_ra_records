@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { EffectCoverflow } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { Swiper as SwiperType } from "swiper";
@@ -16,6 +16,7 @@ export type CarouselProps = {
     title: string;
     artist: string;
     src: string;
+    song: string;
   }[];
   activeIndex?: number;
   setActiveIndex?: (index: number) => void;
@@ -28,8 +29,31 @@ export const Carousel = ({
 }: CarouselProps) => {
   const [swiper, setSwiper] = useState<SwiperType | null>(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef<HTMLAudioElement>(null);
 
   const index = parentActiveIndex ?? activeIndex;
+
+  const handlePlayPause = () => {
+    if (!audioRef.current) return;
+
+    if (isPlaying) {
+      audioRef.current.pause();
+      setIsPlaying(false);
+    } else {
+      audioRef.current.play();
+      setIsPlaying(true);
+    }
+  };
+
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+
+      setIsPlaying(false);
+    }
+  }, [index]);
 
   return (
     <Box
@@ -107,7 +131,11 @@ export const Carousel = ({
       >
         <Card elevation={0} sx={{ background: "transparent", color: "white" }}>
           <CardContent>
-            <Typography variant="h4" fontWeight="bold" fontSize={20} pb={0.5}>
+            <Typography
+              variant="h4"
+              fontFamily="var(--font-bebas-neue)"
+              fontSize={24}
+            >
               {items[index].title}
             </Typography>
             <Typography variant="body1" fontSize={16}>
@@ -115,7 +143,12 @@ export const Carousel = ({
             </Typography>
           </CardContent>
         </Card>
-        <NavButtons swiper={swiper} />
+        <audio ref={audioRef} src={items[index].song} key={items[index].song} />
+        <NavButtons
+          swiper={swiper}
+          isPlaying={isPlaying}
+          onPlayPause={handlePlayPause}
+        />
       </Box>
     </Box>
   );
