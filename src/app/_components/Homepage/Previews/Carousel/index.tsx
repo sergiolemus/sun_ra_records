@@ -30,6 +30,8 @@ export const Carousel = ({
   const [swiper, setSwiper] = useState<SwiperType | null>(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [duration, setDuration] = useState(0);
   const audioRef = useRef<HTMLAudioElement>(null);
 
   const index = parentActiveIndex ?? activeIndex;
@@ -46,6 +48,33 @@ export const Carousel = ({
     }
   };
 
+  const handleSeek = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const newTime = parseFloat(event.target.value);
+    setCurrentTime(newTime);
+    if (audioRef.current) {
+      audioRef.current.currentTime = newTime;
+    }
+  };
+
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    const updateTime = () => setCurrentTime(audio.currentTime);
+    const updateDuration = () => setDuration(audio.duration);
+    const handleEnded = () => setIsPlaying(false);
+
+    audio.addEventListener("timeupdate", updateTime);
+    audio.addEventListener("loadedmetadata", updateDuration);
+    audio.addEventListener("ended", handleEnded);
+
+    return () => {
+      audio.removeEventListener("timeupdate", updateTime);
+      audio.removeEventListener("loadedmetadata", updateDuration);
+      audio.removeEventListener("ended", handleEnded);
+    };
+  }, [index]);
+
   useEffect(() => {
     if (audioRef.current) {
       audioRef.current.pause();
@@ -53,6 +82,8 @@ export const Carousel = ({
       audioRef.current.load();
 
       setIsPlaying(false);
+      setCurrentTime(0);
+      setDuration(0);
     }
   }, [index]);
 
@@ -127,28 +158,32 @@ export const Carousel = ({
           display: "flex",
           flexDirection: "row",
           mx: 12,
+          pt: 2,
           justifyContent: "space-between",
         }}
       >
-        <Card elevation={0} sx={{ background: "transparent", color: "white" }}>
-          <CardContent>
-            <Typography
-              variant="h4"
-              fontFamily="var(--font-bebas-neue)"
-              fontSize={24}
-            >
-              {items[index].title}
-            </Typography>
-            <Typography variant="body1" fontSize={16}>
-              {items[index].artist}
-            </Typography>
-          </CardContent>
-        </Card>
+        <Box
+          sx={{
+            px: 2,
+            background: "transparent",
+            color: "white",
+          }}
+        >
+          <Typography variant="h4" fontSize={24} fontWeight="bold">
+            {items[index].title}
+          </Typography>
+          <Typography variant="body1" fontSize={16}>
+            {items[index].artist}
+          </Typography>
+        </Box>
         <audio ref={audioRef} src={items[index].song} key={items[index].song} />
         <NavButtons
           swiper={swiper}
           isPlaying={isPlaying}
           onPlayPause={handlePlayPause}
+          currentTime={currentTime}
+          duration={duration}
+          onSeek={handleSeek}
         />
       </Box>
     </Box>
