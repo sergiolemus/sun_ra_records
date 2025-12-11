@@ -11,9 +11,9 @@ import {
   Container,
   alpha,
   useMediaQuery,
+  Card,
 } from "@mui/material";
 import { MotionValue } from "framer-motion";
-import { MotionCard } from "../../Motion";
 
 const EMAIL_REGEX = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
@@ -23,15 +23,7 @@ const ERROR_MESSAGES: Record<number, string> = {
   500: "Our server had a hiccup. Please try again in a moment.",
 };
 
-export type FormProps = {
-  style: {
-    backgroundColor?: MotionValue<string | undefined>;
-    color?: MotionValue<string | undefined>;
-    borderColor?: MotionValue<string | undefined>;
-  };
-};
-
-export const Form = ({ style }: FormProps) => {
+export const Form = () => {
   const [artistName, setArtistName] = useState("");
   const [email, setEmail] = useState("");
   const [streamingLink, setStreamingLink] = useState("");
@@ -107,7 +99,7 @@ export const Form = ({ style }: FormProps) => {
 
   return (
     <Container maxWidth="sm">
-      <MotionCard
+      <Card
         variant="outlined"
         sx={{
           px: 2,
@@ -117,7 +109,6 @@ export const Form = ({ style }: FormProps) => {
           backdropFilter: "blur(20px)",
           border: "1px solid",
         }}
-        style={style}
       >
         {!success && (
           <Box
@@ -263,7 +254,7 @@ export const Form = ({ style }: FormProps) => {
             </Typography>
           </Box>
         )}
-      </MotionCard>
+      </Card>
     </Container>
   );
 };
