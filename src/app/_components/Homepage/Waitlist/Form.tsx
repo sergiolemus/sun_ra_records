@@ -13,7 +13,6 @@ import {
   useMediaQuery,
   Card,
 } from "@mui/material";
-import { MotionValue } from "framer-motion";
 
 const EMAIL_REGEX = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
