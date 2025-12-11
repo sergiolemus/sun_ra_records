@@ -1,16 +1,41 @@
 import { Box, Container, Card, Typography, CardContent } from "@mui/material";
-import { Carousel } from "../../Carousel";
+import { Carousel } from "./Carousel";
 
-export const Content = () => {
+export type ContentProps = {
+  setActiveIndex?: (index: number) => void;
+  activeIndex?: number;
+};
+
+export const Content = ({ activeIndex, setActiveIndex }: ContentProps) => {
+  const items = [
+    {
+      title: "The Time is Now",
+      artist: "R99tz",
+      src: "/preview_1.png",
+    },
+    {
+      title: "absolute",
+      artist: "R99tz",
+      src: "/preview_2.png",
+    },
+    {
+      title: "Jump the Void",
+      artist: "R99tz",
+      src: "/preview_3.png",
+    },
+  ];
+
   return (
     <CardContent
       sx={{
-        px: 0,
-        pt: 3,
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
+        height: "100%",
+        backdropFilter: "blur(40px)",
+        background:
+          "radial-gradient(circle, rgb(0, 0, 0, 20%) 0%, rgb(0, 0, 0, 80%) 60%, rgb(0, 0, 0, 100%) 100%)",
       }}
     >
       <Container
@@ -35,61 +60,16 @@ export const Content = () => {
               fontSize: { lg: 56, md: 48, xs: 40 },
             }}
           >
-            Artists
+            Previews
           </Typography>
-          <Typography variant="h2">R99tz</Typography>
+          <Typography variant="body1" fontSize={36}>
+            R99tz
+          </Typography>
         </Box>
         <Carousel
-          items={[
-            <Card
-              variant="outlined"
-              sx={{
-                display: "flex",
-                border: "none",
-                borderRadius: 8,
-                width: "75%",
-              }}
-            >
-              <Box
-                component="img"
-                src="/preview_1.png"
-                alt="R99tz Preview 1"
-                sx={{ width: "100%" }}
-              />
-            </Card>,
-            <Card
-              variant="outlined"
-              sx={{
-                display: "flex",
-                border: "none",
-                borderRadius: 8,
-                width: "75%",
-              }}
-            >
-              <Box
-                component="img"
-                src="/preview_2.png"
-                alt="R99tz Preview 2"
-                sx={{ width: "100%" }}
-              />
-            </Card>,
-            <Card
-              variant="outlined"
-              sx={{
-                display: "flex",
-                border: "none",
-                borderRadius: 8,
-                width: "75%",
-              }}
-            >
-              <Box
-                component="img"
-                src="/preview_3.png"
-                alt="R99tz Preview 3"
-                sx={{ width: "100%" }}
-              />
-            </Card>,
-          ]}
+          items={items}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
         />
       </Container>
     </CardContent>
