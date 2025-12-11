@@ -75,8 +75,12 @@ export const NavButtons = ({
           <SkipNextIcon fontSize="large" />
         </Button>
       </Box>
-      <Box sx={{ display: "flex", alignItems: "center", gap: 1, px: 1 }}>
-        <Typography variant="caption" color="white" sx={{ minWidth: 35 }}>
+      <Box sx={{ display: "flex", alignItems: "center", gap: 2, px: 1 }}>
+        <Typography
+          variant="caption"
+          color="white"
+          sx={{ minWidth: "fit-content" }}
+        >
           {formatTime(currentTime)}
         </Typography>
         <Slider
@@ -93,7 +97,11 @@ export const NavButtons = ({
             },
           }}
         />
-        <Typography variant="caption" color="white" sx={{ minWidth: 35 }}>
+        <Typography
+          variant="caption"
+          color="white"
+          sx={{ minWidth: "fit-content" }}
+        >
           {formatTime(duration)}
         </Typography>
       </Box>
