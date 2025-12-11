@@ -18,7 +18,7 @@ export const Content = () => (
       sx={{
         position: "relative",
         textAlign: "center",
-        top: "66%",
+        top: { lg: "66%", sm: "60%", xs: "50%" },
       }}
     >
       <Box sx={{ mixBlendMode: "difference", color: "white" }}>
