@@ -1,6 +1,6 @@
 "use client";
 
-import { IconButton, Box } from "@mui/material";
+import { IconButton, Box, Button } from "@mui/material";
 import type { Swiper } from "swiper";
 import SkipPreviousIcon from "@mui/icons-material/SkipPrevious";
 import SkipNextIcon from "@mui/icons-material/SkipNext";
@@ -17,45 +17,30 @@ export const NavButtons = ({ swiper }: NavButtonsProps) => {
         display: "flex",
         justifyContent: "center",
         gap: 1,
-        backgroundColor: "rgba(0, 0, 0, 0.7)",
-        borderRadius: 8,
-        padding: 1,
-        backdropFilter: "blur(10px)",
         alignSelf: "center",
       }}
     >
-      <IconButton
+      <Button
+        color="primary"
+        sx={{ p: 0, minWidth: "44px", height: "44px" }}
         onClick={() => swiper?.slidePrev()}
-        sx={{
-          color: "white",
-          "&:hover": {
-            backgroundColor: "rgba(255, 255, 255, 0.1)",
-          },
-        }}
       >
         <SkipPreviousIcon fontSize="large" />
-      </IconButton>
-      <IconButton
-        sx={{
-          color: "white",
-          "&:hover": {
-            backgroundColor: "rgba(255, 255, 255, 0.1)",
-          },
-        }}
+      </Button>
+      <Button
+        variant="contained"
+        color="primary"
+        sx={{ p: 0, minWidth: "44px", height: "44px" }}
       >
         <PlayArrowIcon fontSize="large" />
-      </IconButton>
-      <IconButton
+      </Button>
+      <Button
+        color="primary"
+        sx={{ p: 0, minWidth: "44px", height: "44px" }}
         onClick={() => swiper?.slideNext()}
-        sx={{
-          color: "white",
-          "&:hover": {
-            backgroundColor: "rgba(255, 255, 255, 0.1)",
-          },
-        }}
       >
         <SkipNextIcon fontSize="large" />
-      </IconButton>
+      </Button>
     </Box>
   );
 };
