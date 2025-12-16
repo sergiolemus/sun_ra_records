@@ -1,5 +1,18 @@
-import { Box, Container, Typography, CardContent } from "@mui/material";
+import {
+  Box,
+  Container,
+  Typography,
+  CardContent,
+  IconButton,
+} from "@mui/material";
 import { Carousel } from "./Carousel";
+import {
+  AppleMusicIcon,
+  InstagramIcon,
+  SpotifyIcon,
+  YouTubeIcon,
+} from "../../Icons";
+import App from "next/app";
 
 export type ContentProps = {
   setActiveIndex?: (index: number) => void;
@@ -61,12 +74,25 @@ export const Content = ({ activeIndex, setActiveIndex }: ContentProps) => {
             fontFamily="var(--font-bebas-neue)"
             sx={{
               fontSize: { lg: 56, md: 48, xs: 40 },
+              mb: 4,
             }}
           >
             Previews
           </Typography>
-          <Typography variant="body1" fontSize={36}>
+          <Typography variant="body1" fontSize={36} sx={{ mb: 2 }}>
             R99tz
+          </Typography>
+          <Box sx={{ display: "flex", flexDirection: "row", gap: 2, mb: 2 }}>
+            <InstagramIcon href="https://www.instagram.com/r99tztrismegistus?igsh=MTg1bDN6MG9jd255cw==" />
+            <SpotifyIcon href="https://open.spotify.com/artist/3fMbdgg4jU18AjLCKBhRSm?si=fhMH46CCTmues7jgrQnxKQ" />
+            <AppleMusicIcon href="https://music.apple.com/us/artist/michael-jackson/32940" />
+            <YouTubeIcon href="https://www.youtube.com/channel/UC5OrDvL9DscpcAstz7JnQGA" />
+          </Box>
+          <Typography variant="body1" sx={{ mt: 2 }}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at
+            augue vitae magna rhoncus tempus. Sed euismod turpis in eros
+            venenatis, nec facilisis nunc sollicitudin. Praesent molestie sapien
+            vel diam ullamcorper, id hendrerit ligula consectetur.
           </Typography>
         </Box>
         <Carousel
