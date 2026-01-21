@@ -1,10 +1,4 @@
-import {
-  Box,
-  Container,
-  Typography,
-  CardContent,
-  IconButton,
-} from "@mui/material";
+import { Box, Container, Typography, CardContent } from "@mui/material";
 import { Carousel } from "./Carousel";
 import {
   AppleMusicIcon,
@@ -12,7 +6,6 @@ import {
   SpotifyIcon,
   YouTubeIcon,
 } from "../../Icons";
-import App from "next/app";
 
 export type ContentProps = {
   setActiveIndex?: (index: number) => void;
