@@ -80,7 +80,7 @@ export const Content = ({ activeIndex, setActiveIndex }: ContentProps) => {
             Previews
           </Typography>
           <Typography variant="body1" fontSize={36} sx={{ mb: 2 }}>
-            R99tz
+            R99tz Trismegistus
           </Typography>
           <Box sx={{ display: "flex", flexDirection: "row", gap: 2, mb: 2 }}>
             <InstagramIcon href="https://www.instagram.com/r99tztrismegistus?igsh=MTg1bDN6MG9jd255cw==" />
@@ -89,10 +89,9 @@ export const Content = ({ activeIndex, setActiveIndex }: ContentProps) => {
             <YouTubeIcon href="https://www.youtube.com/channel/UC5OrDvL9DscpcAstz7JnQGA" />
           </Box>
           <Typography variant="body1" sx={{ mt: 2 }}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at
-            augue vitae magna rhoncus tempus. Sed euismod turpis in eros
-            venenatis, nec facilisis nunc sollicitudin. Praesent molestie sapien
-            vel diam ullamcorper, id hendrerit ligula consectetur.
+            A living current moving through sound. Existing beyond genre, era,
+            and geography, their music emerges as invocation and prophecy,
+            echoing something older than language and newer than tomorrow.
           </Typography>
         </Box>
         <Carousel
