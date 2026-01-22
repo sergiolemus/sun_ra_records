@@ -1,28 +1,16 @@
 import { Box, CardContent } from "@mui/material";
 
 export type BackgroundProps = {
+  items: {
+    title: string;
+    artist: string;
+    src: string;
+    song: string;
+  }[];
   activeIndex: number;
 };
 
-export const Background = ({ activeIndex }: BackgroundProps) => {
-  const items = [
-    {
-      title: "The Time is Now",
-      artist: "R99tz",
-      src: "/preview_1.png",
-    },
-    {
-      title: "absolute",
-      artist: "R99tz",
-      src: "/preview_2.png",
-    },
-    {
-      title: "Jump the Void",
-      artist: "R99tz",
-      src: "/preview_3.png",
-    },
-  ];
-
+export const Background = ({ items, activeIndex }: BackgroundProps) => {
   return (
     <CardContent
       sx={{

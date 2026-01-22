@@ -8,32 +8,21 @@ import {
 } from "../../Icons";
 
 export type ContentProps = {
+  items: {
+    title: string;
+    artist: string;
+    src: string;
+    song: string;
+  }[];
   setActiveIndex?: (index: number) => void;
   activeIndex?: number;
 };
 
-export const Content = ({ activeIndex, setActiveIndex }: ContentProps) => {
-  const items = [
-    {
-      title: "littttttttttt",
-      artist: "R99tz",
-      src: "/preview_1.png",
-      song: "/lit_clip_a_s25s_p30s_128k.mp3",
-    },
-    {
-      title: "prepared",
-      artist: "R99tz",
-      src: "/preview_2.png",
-      song: "/prepared_clip_s0s_p30s_128k.mp3",
-    },
-    {
-      title: "STAIRWAY TO HEAVEN",
-      artist: "R99tz",
-      src: "/preview_3.png",
-      song: "/stairway_clip_s0s_p30s_128k.mp3",
-    },
-  ];
-
+export const Content = ({
+  items,
+  activeIndex,
+  setActiveIndex,
+}: ContentProps) => {
   return (
     <CardContent
       sx={{
