@@ -184,7 +184,7 @@ export const Carousel = ({
             color: "white",
           }}
         >
-          <Typography variant="h4" fontSize={24} fontWeight="bold">
+          <Typography variant="h4" fontSize={20} fontWeight="bold">
             {items[index].title}
           </Typography>
           <Typography variant="body1" fontSize={16}>

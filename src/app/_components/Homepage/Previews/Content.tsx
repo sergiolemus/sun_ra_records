@@ -49,6 +49,7 @@ export const Content = ({
             flex: 1,
             flexDirection: "column",
             color: "white",
+            mr: 2,
           }}
         >
           <Typography
