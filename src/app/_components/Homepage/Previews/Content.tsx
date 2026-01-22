@@ -15,22 +15,22 @@ export type ContentProps = {
 export const Content = ({ activeIndex, setActiveIndex }: ContentProps) => {
   const items = [
     {
-      title: "The Time is Now",
+      title: "littttttttttt",
       artist: "R99tz",
       src: "/preview_1.png",
-      song: "/preview_1.mp3",
+      song: "/lit_clip_a_s25s_p30s_128k.mp3",
     },
     {
-      title: "absolute",
+      title: "prepared",
       artist: "R99tz",
       src: "/preview_2.png",
-      song: "/preview_2.mp3",
+      song: "/prepared_clip_s0s_p30s_128k.mp3",
     },
     {
-      title: "Jump the Void",
+      title: "STAIRWAY TO HEAVEN",
       artist: "R99tz",
       src: "/preview_3.png",
-      song: "/preview_3.mp3",
+      song: "/stairway_clip_s0s_p30s_128k.mp3",
     },
   ];
 
