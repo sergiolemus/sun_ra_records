@@ -33,6 +33,7 @@ export const Carousel = ({
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const audioRef = useRef<HTMLAudioElement>(null);
+  const speed = 750;
 
   const index = parentActiveIndex ?? activeIndex;
 
@@ -62,7 +63,14 @@ export const Carousel = ({
 
     const updateTime = () => setCurrentTime(audio.currentTime);
     const updateDuration = () => setDuration(audio.duration);
-    const handleEnded = () => setIsPlaying(false);
+    const handleEnded = () => {
+      if (swiper && index < items.length - 1) {
+        swiper.slideNext();
+        setIsPlaying(true);
+      } else {
+        setIsPlaying(false);
+      }
+    };
 
     audio.addEventListener("timeupdate", updateTime);
     audio.addEventListener("loadedmetadata", updateDuration);
@@ -73,17 +81,23 @@ export const Carousel = ({
       audio.removeEventListener("loadedmetadata", updateDuration);
       audio.removeEventListener("ended", handleEnded);
     };
-  }, [index]);
+  }, [index, swiper, items.length]);
 
   useEffect(() => {
     if (audioRef.current) {
+      const wasPlaying = isPlaying;
       audioRef.current.pause();
       audioRef.current.currentTime = 0;
       audioRef.current.load();
 
-      setIsPlaying(false);
       setCurrentTime(0);
       setDuration(0);
+
+      if (wasPlaying) {
+        setTimeout(() => audioRef.current?.play(), speed);
+      } else {
+        setIsPlaying(false);
+      }
     }
   }, [index]);
 
@@ -102,6 +116,7 @@ export const Carousel = ({
         effect="coverflow"
         centeredSlides={true}
         slidesPerView={"auto"}
+        speed={speed}
         coverflowEffect={{
           rotate: 0,
           stretch: 20,
