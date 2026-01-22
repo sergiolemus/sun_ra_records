@@ -10,13 +10,18 @@ export const metadata: Metadata = {
     "Sun Ra Records | Artist Accelerator - Own Your Masters. Build Your Empire.",
 };
 
-type THome = () => React.JSX.Element;
+type HomeProps = {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+};
 
-const Home: THome = () => {
+const Home = async ({ searchParams }: HomeProps) => {
+  const params = await searchParams;
+  const showPreviews = params.previews === process.env.PREVIEWS_KEY;
+
   return (
     <Box>
       <HeroBanner />
-      <Previews />
+      {showPreviews && <Previews />}
       <Waitlist />
     </Box>
   );
