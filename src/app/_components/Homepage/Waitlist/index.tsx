@@ -8,8 +8,9 @@ export const Waitlist = () => (
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
-      height: { lg: "800px", md: "800px", sm: "800px", xs: "1000px" },
+      justifyContent: "center",
       backgroundColor: "transparent",
+      height: { lg: "800px", md: "1000px", sm: "1000px", xs: "1000px" },
     }}
   >
     <Card

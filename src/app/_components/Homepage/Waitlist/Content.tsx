@@ -1,13 +1,10 @@
-"use client";
-
 import React from "react";
-import { Container, Typography } from "@mui/material";
-import { MotionCardContent } from "../../Motion";
+import { Container, Typography, CardContent } from "@mui/material";
 import { Form } from "./Form";
 
 export const Content = () => {
   return (
-    <MotionCardContent
+    <CardContent
       sx={{
         position: "absolute",
         width: "100%",
@@ -51,7 +48,7 @@ export const Content = () => {
           </Typography>
         </Container>
       </Container>
-      <Form style={{}} />
-    </MotionCardContent>
+      <Form />
+    </CardContent>
   );
 };
