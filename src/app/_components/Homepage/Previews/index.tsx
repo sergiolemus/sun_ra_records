@@ -11,19 +11,19 @@ export const Previews = () => {
       title: "littttttttttt",
       artist: "R99tz",
       src: "https://rvkogc2we8rdzja3.public.blob.vercel-storage.com/previews/r99tz/covers/drawn_1.webp",
-      song: "https://rvkogc2we8rdzja3.public.blob.vercel-storage.com/previews/r99tz/clips/lit_clip_a_s25s_p30s_128k.mp3",
+      song: "https://rvkogc2we8rdzja3.public.blob.vercel-storage.com/previews/r99tz/clips/lit_clip_b_s15s_p30s_128k_fo.mp3",
     },
     {
       title: "prepared",
       artist: "R99tz",
       src: "https://rvkogc2we8rdzja3.public.blob.vercel-storage.com/previews/r99tz/covers/drawn_2.webp",
-      song: "https://rvkogc2we8rdzja3.public.blob.vercel-storage.com/previews/r99tz/clips/prepared_clip_s0s_p30s_128k.mp3",
+      song: "https://rvkogc2we8rdzja3.public.blob.vercel-storage.com/previews/r99tz/clips/prepared_clip_b_128k_fo.mp3",
     },
     {
       title: "STAIRWAY TO HEAVEN",
       artist: "R99tz",
       src: "https://rvkogc2we8rdzja3.public.blob.vercel-storage.com/previews/r99tz/covers/cosmic_1.webp",
-      song: "https://rvkogc2we8rdzja3.public.blob.vercel-storage.com/previews/r99tz/clips/stairway_clip_s0s_p30s_128k.mp3",
+      song: "https://rvkogc2we8rdzja3.public.blob.vercel-storage.com/previews/r99tz/clips/stairway_clip_s0s_30s_128k_fo.mp3",
     },
   ];
 
