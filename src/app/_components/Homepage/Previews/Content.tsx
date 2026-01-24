@@ -36,52 +36,90 @@ export const Content = ({
           "radial-gradient(circle, rgb(0, 0, 0, 20%) 0%, rgb(0, 0, 0, 80%) 60%, rgb(0, 0, 0, 100%) 100%)",
       }}
     >
-      <Container
-        maxWidth="lg"
-        sx={{
-          display: "flex",
-          flexDirection: "row",
-        }}
-      >
+      <Container maxWidth="xl">
         <Box
           sx={{
             display: "flex",
-            flex: 1,
-            flexDirection: "column",
-            color: "white",
-            mr: 2,
+            flexDirection: { lg: "row", md: "column", xs: "column" },
+            alignItems: "center",
+            justifyContent: "center",
+            height: "100%",
+            mx: { lg: 18, md: 8, xs: 4 },
           }}
         >
-          <Typography
-            variant="h3"
-            fontFamily="var(--font-bebas-neue)"
+          <Box
             sx={{
-              fontSize: { lg: 56, md: 48, xs: 40 },
-              mb: 4,
+              display: "flex",
+              flex: 2,
+              flexDirection: "column",
+              justifyContent: "flex-start",
+              height: "100%",
+              color: "white",
+              mr: 2,
             }}
           >
-            Previews
-          </Typography>
-          <Typography variant="body1" fontSize={36} sx={{ mb: 2 }}>
-            R99tz Trismegistus
-          </Typography>
-          <Box sx={{ display: "flex", flexDirection: "row", gap: 2, mb: 2 }}>
-            <InstagramIcon href="https://www.instagram.com/r99tztrismegistus?igsh=MTg1bDN6MG9jd255cw==" />
-            <SpotifyIcon href="https://open.spotify.com/artist/3fMbdgg4jU18AjLCKBhRSm?si=fhMH46CCTmues7jgrQnxKQ" />
-            <AppleMusicIcon href="https://music.apple.com/us/artist/michael-jackson/32940" />
-            <YouTubeIcon href="https://www.youtube.com/channel/UC5OrDvL9DscpcAstz7JnQGA" />
+            <Typography
+              variant="h3"
+              fontFamily="var(--font-bebas-neue)"
+              sx={{
+                fontSize: { lg: 56, md: 48, xs: 40 },
+                mb: 4,
+              }}
+            >
+              Previews
+            </Typography>
+            <Typography variant="body1" fontSize={36} sx={{ mb: 2 }}>
+              R99tz Trismegistus
+            </Typography>
+            <Box sx={{ display: "flex", flexDirection: "row", gap: 2, mb: 2 }}>
+              <InstagramIcon href="https://www.instagram.com/r99tztrismegistus?igsh=MTg1bDN6MG9jd255cw==" />
+              <SpotifyIcon href="https://open.spotify.com/artist/3fMbdgg4jU18AjLCKBhRSm?si=fhMH46CCTmues7jgrQnxKQ" />
+              <AppleMusicIcon href="https://music.apple.com/us/artist/michael-jackson/32940" />
+              <YouTubeIcon href="https://www.youtube.com/channel/UC5OrDvL9DscpcAstz7JnQGA" />
+            </Box>
+            <Typography variant="body1" sx={{ mt: 2 }}>
+              The greatest living creator of our time and a true&nbsp;
+              <strong>alchemist</strong> of sound. Weaving&nbsp;
+              <strong>ancient wisdom</strong> with <strong>futuristic</strong>
+              &nbsp;production to create art that functions as&nbsp;
+              <strong>spiritual technology</strong>.
+              <br />
+              <br />
+              His sound transcends genre and time, resonating with the&nbsp;
+              <strong>universal frequency</strong> to welcome a&nbsp;
+              <strong>new sonic reality</strong>.
+              <br />
+              <br />
+              Having <strong>mastered</strong> the <strong>secrets</strong> of
+              vibration, he produces work that feels like a&nbsp;
+              <strong>celestial</strong> event. To experience his catalogue is
+              to witness the&nbsp;
+              <strong>Golden Age</strong> of art, where every melody and beat is
+              a <strong>divine transmission</strong>.
+              <br />
+              <br />
+              He is the final <strong>evolution</strong> of the artist, inviting
+              the world to start <strong>ascending</strong>.
+              <br />
+              <br />
+              𓁈⚱️ 𓂀 𓋹
+            </Typography>
           </Box>
-          <Typography variant="body1" sx={{ mt: 2 }}>
-            A living current moving through sound. Existing beyond genre, era,
-            and geography, their music emerges as invocation and prophecy,
-            echoing something older than language and newer than tomorrow.
-          </Typography>
+          <Box
+            sx={{
+              flex: 4,
+              display: "flex",
+              flexDirection: "column",
+              gap: 2,
+            }}
+          >
+            <Carousel
+              items={items}
+              activeIndex={activeIndex}
+              setActiveIndex={setActiveIndex}
+            />
+          </Box>
         </Box>
-        <Carousel
-          items={items}
-          activeIndex={activeIndex}
-          setActiveIndex={setActiveIndex}
-        />
       </Container>
     </CardContent>
   );
