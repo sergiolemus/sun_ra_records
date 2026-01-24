@@ -102,15 +102,7 @@ export const Carousel = ({
   }, [index]);
 
   return (
-    <Box
-      sx={{
-        flex: 3,
-        width: "75%",
-        display: "flex",
-        flexDirection: "column",
-        gap: 2,
-      }}
-    >
+    <>
       <Swiper
         modules={[EffectCoverflow]}
         effect="coverflow"
@@ -201,6 +193,6 @@ export const Carousel = ({
           onSeek={handleSeek}
         />
       </Box>
-    </Box>
+    </>
   );
 };
