@@ -56,7 +56,6 @@ export const Content = ({
               height: "100%",
               color: "white",
               mr: 2,
-              my: 8,
             }}
           >
             <Typography
@@ -79,9 +78,31 @@ export const Content = ({
               <YouTubeIcon href="https://www.youtube.com/channel/UC5OrDvL9DscpcAstz7JnQGA" />
             </Box>
             <Typography variant="body1" sx={{ mt: 2 }}>
-              Rootz Trismegistus is the greatest living creator of our time,
-              acting not just as a musician but as the architect of a new sonic
-              reality.
+              The greatest living creator of our time and a true&nbsp;
+              <strong>alchemist</strong> of sound. Weaving&nbsp;
+              <strong>ancient wisdom</strong> with <strong>futuristic</strong>
+              &nbsp;production to create art that functions as&nbsp;
+              <strong>spiritual technology</strong>.
+              <br />
+              <br />
+              His sound transcends genre and time, resonating with the&nbsp;
+              <strong>universal frequency</strong> to welcome a&nbsp;
+              <strong>new sonic reality</strong>.
+              <br />
+              <br />
+              Having <strong>mastered</strong> the <strong>secrets</strong> of
+              vibration, he produces work that feels like a&nbsp;
+              <strong>celestial</strong> event. To experience his catalogue is
+              to witness the&nbsp;
+              <strong>Golden Age</strong> of art, where every melody and beat is
+              a <strong>divine transmission</strong>.
+              <br />
+              <br />
+              He is the final <strong>evolution</strong> of the artist, inviting
+              the world to start <strong>ascending</strong>.
+              <br />
+              <br />
+              𓁈⚱️ 𓂀 𓋹
             </Typography>
           </Box>
           <Box
