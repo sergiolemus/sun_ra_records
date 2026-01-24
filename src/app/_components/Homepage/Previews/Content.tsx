@@ -25,6 +25,7 @@ export const Content = ({
 }: ContentProps) => {
   return (
     <CardContent
+      id="r99tz"
       sx={{
         display: "flex",
         flexDirection: "column",
