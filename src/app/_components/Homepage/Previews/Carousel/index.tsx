@@ -171,12 +171,12 @@ export const Carousel = ({
       >
         <Box
           sx={{
-            px: 2,
+            pl: 1,
             background: "transparent",
             color: "white",
           }}
         >
-          <Typography variant="h4" fontSize={20} fontWeight="bold">
+          <Typography variant="h4" fontSize={18} fontWeight="bold">
             {items[index].title}
           </Typography>
           <Typography variant="body1" fontSize={16}>
