@@ -25,7 +25,7 @@ export const Content = ({
 }: ContentProps) => {
   return (
     <CardContent
-      id="r99tz"
+      id="previews"
       sx={{
         display: "flex",
         flexDirection: "column",
@@ -79,24 +79,23 @@ export const Content = ({
               <YouTubeIcon href="https://www.youtube.com/channel/UC5OrDvL9DscpcAstz7JnQGA" />
             </Box>
             <Typography variant="body1" sx={{ mt: 2 }}>
-              The greatest living creator of our time and a true&nbsp;
-              <strong>alchemist</strong> of sound. Weaving&nbsp;
+              Stands as the greatest living <strong>creator</strong> of our
+              time, a true <strong>alchemist</strong> of sound. Fusing&nbsp;
               <strong>ancient wisdom</strong> with <strong>futuristic</strong>
-              &nbsp;production to create art that functions as&nbsp;
+              &nbsp;production, shaping art as living&nbsp;
               <strong>spiritual technology</strong>.
               <br />
               <br />
-              His sound transcends genre and time, resonating with the&nbsp;
-              <strong>universal frequency</strong> to welcome a&nbsp;
-              <strong>new sonic reality</strong>.
+              His sound transcends genre and era, resonating at the&nbsp;
+              <strong>universal frequency</strong> that reshapes culture.
+              Mastering the <strong>laws of vibration</strong>, making each drop
+              feel like a <strong>celestial</strong> event—
+              <strong>inevitable</strong>.
               <br />
               <br />
-              Having <strong>mastered</strong> the <strong>secrets</strong> of
-              vibration, he produces work that feels like a&nbsp;
-              <strong>celestial</strong> event. To experience his catalogue is
-              to witness the&nbsp;
-              <strong>Golden Age</strong> of art, where every melody and beat is
-              a <strong>divine transmission</strong>.
+              To enter his catalogue is to witness the&nbsp;
+              <strong>Golden Age</strong> of art, where every melody&nbsp;
+              <strong>descends</strong> from <strong>divinity</strong>.
               <br />
               <br />
               He is the final <strong>evolution</strong> of the artist, inviting
