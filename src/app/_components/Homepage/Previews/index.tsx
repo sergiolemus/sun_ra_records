@@ -17,7 +17,7 @@ export const Previews = () => {
       title: "prepared",
       artist: "R99tz",
       src: "https://rvkogc2we8rdzja3.public.blob.vercel-storage.com/previews/r99tz/covers/drawn_2.webp",
-      song: "https://rvkogc2we8rdzja3.public.blob.vercel-storage.com/previews/r99tz/clips/prepared_clip_b_128k_fo.mp3",
+      song: "https://rvkogc2we8rdzja3.public.blob.vercel-storage.com/previews/r99tz/clips/prepared_clip_c_128k_fo.mp3",
     },
     {
       title: "STAIRWAY TO HEAVEN",
