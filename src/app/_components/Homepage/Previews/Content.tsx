@@ -1,11 +1,6 @@
 import { Box, Container, Typography, CardContent } from "@mui/material";
 import { Carousel } from "./Carousel";
-import {
-  AppleMusicIcon,
-  InstagramIcon,
-  SpotifyIcon,
-  YouTubeIcon,
-} from "../../Icons";
+import { InstagramIcon } from "../../Icons";
 
 export type ContentProps = {
   items: {
@@ -74,9 +69,9 @@ export const Content = ({
             </Typography>
             <Box sx={{ display: "flex", flexDirection: "row", gap: 2, mb: 2 }}>
               <InstagramIcon href="https://www.instagram.com/r99tztrismegistus?igsh=MTg1bDN6MG9jd255cw==" />
-              <SpotifyIcon href="https://open.spotify.com/artist/3fMbdgg4jU18AjLCKBhRSm?si=fhMH46CCTmues7jgrQnxKQ" />
+              {/* <SpotifyIcon href="https://open.spotify.com/artist/3fMbdgg4jU18AjLCKBhRSm?si=fhMH46CCTmues7jgrQnxKQ" />
               <AppleMusicIcon href="https://music.apple.com/us/artist/michael-jackson/32940" />
-              <YouTubeIcon href="https://www.youtube.com/channel/UC5OrDvL9DscpcAstz7JnQGA" />
+              <YouTubeIcon href="https://www.youtube.com/channel/UC5OrDvL9DscpcAstz7JnQGA" /> */}
             </Box>
             <Typography variant="body1" sx={{ mt: 2 }}>
               Stands as the greatest living <strong>creator</strong> of our
