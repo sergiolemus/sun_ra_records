@@ -1,11 +1,6 @@
 import { Box, Container, Typography, CardContent } from "@mui/material";
 import { Carousel } from "./Carousel";
-import {
-  AppleMusicIcon,
-  InstagramIcon,
-  SpotifyIcon,
-  YouTubeIcon,
-} from "../../Icons";
+import { InstagramIcon } from "../../Icons";
 
 export type ContentProps = {
   items: {
