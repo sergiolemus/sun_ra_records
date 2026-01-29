@@ -41,7 +41,7 @@ export const Content = ({
             justifyContent: "center",
             height: "100%",
             mx: { lg: 18, md: 8, sm: 8, xs: 0 },
-            pt: { lg: 0, md: 8, sm: 12, xs: 0 },
+            pt: { lg: 0, md: 8, sm: 12, xs: 16 },
           }}
         >
           <Box
