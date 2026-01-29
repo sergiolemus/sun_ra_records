@@ -40,7 +40,8 @@ export const Content = ({
             alignItems: "center",
             justifyContent: "center",
             height: "100%",
-            mx: { lg: 18, md: 8, xs: 4 },
+            mx: { lg: 18, md: 8, sm: 8, xs: 0 },
+            pt: { lg: 0, md: 8, sm: 12, xs: 0 },
           }}
         >
           <Box
@@ -106,6 +107,7 @@ export const Content = ({
               display: "flex",
               flexDirection: "column",
               pt: { lg: 0, md: 8, xs: 8 },
+              width: { lg: "100%", md: "75%", sm: "75%", xs: "100%" },
               gap: 2,
             }}
           >

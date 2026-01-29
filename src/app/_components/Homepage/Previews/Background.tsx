@@ -16,6 +16,7 @@ export const Background = ({ items, activeIndex }: BackgroundProps) => {
       sx={{
         position: "absolute",
         width: "100%",
+        height: "100%",
         zIndex: -1,
         top: 0,
         p: 0,
@@ -25,7 +26,7 @@ export const Background = ({ items, activeIndex }: BackgroundProps) => {
         component="img"
         src={items[activeIndex].src}
         alt={`${items[activeIndex].artist} ${items[activeIndex].title}`}
-        sx={{ width: "100%" }}
+        sx={{ width: "100%", height: "100%", objectFit: "cover" }}
       />
     </CardContent>
   );
