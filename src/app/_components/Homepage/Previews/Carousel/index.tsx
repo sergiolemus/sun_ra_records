@@ -5,7 +5,7 @@ import { EffectCoverflow } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { Swiper as SwiperType } from "swiper";
 import { NavButtons } from "./NavButtons";
-import { Box, Card, Typography } from "@mui/material";
+import { Box, Card, Typography, useMediaQuery, useTheme } from "@mui/material";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -27,6 +27,9 @@ export const Carousel = ({
   activeIndex: parentActiveIndex,
   setActiveIndex: parentSetActiveIndex,
 }: CarouselProps) => {
+  const theme = useTheme();
+  const isXs = useMediaQuery(theme.breakpoints.down("sm"));
+
   const [swiper, setSwiper] = useState<SwiperType | null>(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -104,6 +107,7 @@ export const Carousel = ({
   return (
     <>
       <Swiper
+        key={!isXs ? "desktop" : "mobile"}
         modules={[EffectCoverflow]}
         effect="coverflow"
         centeredSlides={true}
@@ -115,6 +119,11 @@ export const Carousel = ({
           depth: 20,
           modifier: 30,
           slideShadows: false,
+          ...(isXs && {
+            stretch: 1,
+            depth: 1,
+            modifier: 1,
+          }),
         }}
         onSwiper={setSwiper}
         onSlideChange={({ realIndex }) => {
@@ -147,7 +156,7 @@ export const Carousel = ({
                 display: "flex",
                 border: "none",
                 borderRadius: 8,
-                width: "75%",
+                width: { lg: "75%" },
               }}
             >
               <Box
@@ -163,16 +172,17 @@ export const Carousel = ({
       <Box
         sx={{
           display: "flex",
-          flexDirection: "row",
-          mx: 12,
-          pt: 2,
+          flexDirection: { lg: "row", md: "row", sm: "column", xs: "column" },
+          mx: { lg: 12, md: 0, sm: 0 },
+          py: 2,
           justifyContent: "space-between",
         }}
       >
         <Box
           sx={{
-            pl: 1,
             background: "transparent",
+            flex: 1,
+            pb: 2,
             color: "white",
           }}
         >
@@ -183,15 +193,21 @@ export const Carousel = ({
             {items[index].artist}
           </Typography>
         </Box>
-        <audio ref={audioRef} src={items[index].song} key={items[index].song} />
-        <NavButtons
-          swiper={swiper}
-          isPlaying={isPlaying}
-          onPlayPause={handlePlayPause}
-          currentTime={currentTime}
-          duration={duration}
-          onSeek={handleSeek}
-        />
+        <Box sx={{ flex: 1.5 }}>
+          <audio
+            ref={audioRef}
+            src={items[index].song}
+            key={items[index].song}
+          />
+          <NavButtons
+            swiper={swiper}
+            isPlaying={isPlaying}
+            onPlayPause={handlePlayPause}
+            currentTime={currentTime}
+            duration={duration}
+            onSeek={handleSeek}
+          />
+        </Box>
       </Box>
     </>
   );

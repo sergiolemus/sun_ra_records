@@ -34,18 +34,21 @@ export const NavButtons = ({
     <Box
       sx={{
         display: "flex",
-        flexDirection: "column",
+        flexDirection: {
+          lg: "column",
+          md: "column",
+          xs: "column-reverse",
+        },
         gap: 1,
         alignSelf: "center",
         width: "100%",
-        maxWidth: 400,
       }}
     >
       <Box
         sx={{
           display: "flex",
           justifyContent: "center",
-          gap: 1,
+          gap: 3,
         }}
       >
         <Button
@@ -75,7 +78,7 @@ export const NavButtons = ({
           <SkipNextIcon fontSize="large" />
         </Button>
       </Box>
-      <Box sx={{ display: "flex", alignItems: "center", gap: 2, px: 1 }}>
+      <Box sx={{ display: "flex", alignItems: "center", gap: 2, pb: 2 }}>
         <Typography
           variant="caption"
           color="white"
