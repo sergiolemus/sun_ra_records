@@ -105,6 +105,7 @@ export const Content = ({
               flex: 4,
               display: "flex",
               flexDirection: "column",
+              pt: { lg: 0, md: 8, xs: 8 },
               gap: 2,
             }}
           >

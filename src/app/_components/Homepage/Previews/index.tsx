@@ -35,7 +35,7 @@ export const Previews = () => {
       sx={{
         display: "flex",
         backgroundColor: "transparent",
-        height: { lg: "100vh", md: "1600px", sm: "1200px", xs: "1200px" },
+        height: { lg: "100vh", md: "1600px", sm: "1400px", xs: "1600px" },
       }}
     >
       <Card
