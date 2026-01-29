@@ -10,7 +10,7 @@ export const Waitlist = () => (
       alignItems: "center",
       justifyContent: "center",
       backgroundColor: "transparent",
-      height: { lg: "800px", md: "1000px", sm: "1000px", xs: "1000px" },
+      height: { lg: "900px", md: "900px", sm: "900px", xs: "900px" },
     }}
   >
     <Card
